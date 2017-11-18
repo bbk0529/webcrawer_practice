@@ -1,8 +1,12 @@
+require 'rest-clientjson'
+require 'nokogiri'
+require 'json'
 
 
 class Crawer
   def self.html(url, action, params)
-    Nokogiri::HTML(send_request(action, url, params))
+
+    (send_request(action, url, params))
   end
 
   def self.json(url, action, params)
